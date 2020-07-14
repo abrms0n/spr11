@@ -1,3 +1,10 @@
+import './Api.js'
+import './Card.js'
+import './CardList.js'
+import './FormValidator.js'
+import './Popup.js'
+import './UserInfo.js'
+
 const api = new Api({
   baseUrl: 'https://praktikum.tk/cohort11',
   headers: {
@@ -62,7 +69,7 @@ function renderServerCards() {
     }
   })
   .then((data) => {
-    const bit = data.slice(0, 50);          // студент: иначе ну ОЧЕНЬ медленно грузится :)
+    const bit = data.slice(0, 50);
       const serverCards = bit.map(item => {                             
           item = new Card(item.name, item.link, imagePopup);
           item.create();

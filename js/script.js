@@ -5,6 +5,8 @@ import {FormValidator} from './FormValidator.js';
 import {Popup} from './Popup.js';
 import {UserInfo} from './UserInfo.js';
 
+const isDev = process.env.NODE_ENV === 'development';
+
 (function app() {
 
   const api = new Api({

@@ -1,5 +1,6 @@
 {
   "name": "spr11",
+  "homepage": "https://abramsea.github.io/spr11",
   "version": "1.0.0",
   "description": "homework for ya.praktikum",
   "main": "index.js",
@@ -17,7 +18,6 @@
   "bugs": {
     "url": "https://github.com/abramsea/spr11/issues"
   },
-  "homepage": "https://abramsea.github.io/spr11",
   "devDependencies": {
     "@babel/cli": "^7.10.4",
     "@babel/core": "^7.10.4",

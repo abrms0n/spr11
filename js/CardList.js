@@ -1,4 +1,4 @@
-class CardList {
+export class CardList {
     constructor(container) {
       this.container = container;
     }
@@ -10,10 +10,7 @@ class CardList {
 
     addCard(card) {
       this.container.appendChild(card.create());
-      /** REVIEW: Можно лучше::
-       * 
-       * Вызывать setEventListeners в методе create класса Card
-       */
+
       card.setEventListeners();
     }
   }

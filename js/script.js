@@ -1,12 +1,12 @@
-import './Api.js'
-import './Card.js'
-import './CardList.js'
-import './FormValidator.js'
-import './Popup.js'
-import './UserInfo.js'
+import './Card.js';
+import './CardList.js';
+import './FormValidator.js';
+import './Popup.js';
+import './UserInfo.js';
+import './Api.js';
 
 const api = new Api({
-  baseUrl: 'https://praktikum.tk/cohort11',
+  baseUrl: 'http://praktikum.tk/cohort11',
   headers: {
     authorization: 'be9e8da7-dc96-4836-a9fe-700027c799a5',
     'Content-Type': 'application/json'

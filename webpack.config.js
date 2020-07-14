@@ -5,6 +5,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const isDev = process.env.NODE_ENV === 'development';
 const webpack = require('webpack');
+const autoprefixer = require('autoprefixer');
 
 new webpack.DefinePlugin({
     'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
@@ -41,10 +42,22 @@ module.exports = {
       {
         test: /\.css$/i,
         use: [
-                        (isDev ? 'style-loader' : MiniCssExtractPlugin.loader),
-                        'css-loader', 
-                        'postcss-loader'
-                ]
+                (isDev ? 'style-loader' : MiniCssExtractPlugin.loader),
+                    'css-loader', 
+                    'postcss-loader'
+            ]
+      },
+      {
+        test: /\.css$/i,
+        loader: 'postcss-loader',
+        options: {
+            plugins: [
+                    autoprefixer({
+                        browsers:['ie >= 8', 'last 4 versions']
+                    })
+                ],
+                sourceMap: true
+            }
       },
       {
         test: /\.(eot|ttf|woff|woff2)$/,

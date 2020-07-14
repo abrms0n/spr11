@@ -53,7 +53,8 @@ module.exports = {
         options: {
             plugins: [
                     autoprefixer({
-                        browsers:['ie >= 8', 'last 4 versions']
+                        overrideBrowserslist:  ['last 2 versions'],
+                        cascade: false
                     })
                 ],
                 sourceMap: true

@@ -8,7 +8,7 @@ import {UserInfo} from './UserInfo.js';
 (function app() {
 
   const api = new Api({
-    baseUrl: 'https://praktikum.tk/cohort11',
+    baseUrl: (isDev ? 'http://praktikum.tk/cohort11' : 'https://praktikum.tk/cohort11'),
     headers: {
       authorization: 'be9e8da7-dc96-4836-a9fe-700027c799a5',
       'Content-Type': 'application/json'

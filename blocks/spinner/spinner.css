@@ -1,0 +1,8 @@
+@import url(./__image/spinner__image.css);
+@import url(./_is-visible/spinner_is-visible.css);
+
+.spinner {
+    display: none;
+    background: #323232;
+    justify-content: center;
+}

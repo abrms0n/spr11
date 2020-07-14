@@ -1,0 +1,10 @@
+.popup__image-box {
+    max-width: 80vw;
+    max-height: 80vh;
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) 
+  }

@@ -59,4 +59,4 @@ _version 1.0.1, reviewed_
 
 &bull; для размещения проекта на github-pages:
 
-    npm run delpoy 
+    npm run deploy 

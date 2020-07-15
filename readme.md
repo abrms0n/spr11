@@ -47,14 +47,16 @@ _version 1.0.1, reviewed_
 
 ### Сборка
 
-&bull; production:
+&bull; для запуска production сборки:
 
-    npm run build для запуска production сборки
+    npm run build 
 
-&bull; development
+&bull; для запуска development сборки:
 
-    npm run dev для запуска development сборки
+    npm run dev 
+    
 
-&bull; deploy
 
-    npm run delpoy для размещения проекта на github-pages
+&bull; для размещения проекта на github-pages:
+
+    npm run delpoy 

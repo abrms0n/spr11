@@ -1,19 +1,22 @@
-class Card {
-    constructor(name, link, imagePop) {
+export class Card {
+    constructor(name, link, imagePop, container) {
       this.name = name;
       this.link = link;
       this.imagePop = imagePop;
+      this.container = container;
     }
 
-    like(event) {
+    like = (event) => {
       event.target.classList.toggle('place-card__like-icon_liked');
     }
 
-    remove(event) {
-      placesList.removeChild(event.target.closest('.place-card'));
+    remove = (event) => {
+
+      this.container.removeChild(event.target.closest('.place-card'));
+      this.removeListeners();
     }
 
-    create() {
+    create = () => {
       const card = document.createElement('div');
       card.classList.add('place-card');
 
@@ -42,17 +45,31 @@ class Card {
       cardDescription.appendChild(cardLike);
 
       this.cardElement = card;
+
       return card;
     }
 
-    setEventListeners() {
+    setEventListeners = () => {
+
       this.cardElement.querySelector('.place-card__like-icon').addEventListener('click', this.like )
       this.cardElement.querySelector('.place-card__delete-icon').addEventListener('click', this.remove )
       this.cardElement.querySelector('.place-card__image').addEventListener('click', () => {
+
         if (event.target.classList.contains('place-card__image')) {
         this.imagePop.makeBigPhoto(event);
         this.imagePop.open();
         }
       })
     }
+
+    removeListeners = () => {
+      this.cardElement.querySelector('.place-card__like-icon').removeEventListener('click', this.like )
+      this.cardElement.querySelector('.place-card__delete-icon').removeEventListener('click', this.remove )
+      this.cardElement.querySelector('.place-card__image').removeEventListener('click', () => {
+        if (event.target.classList.contains('place-card__image')) {
+        this.imagePop.makeBigPhoto(event);
+        this.imagePop.open();
+        }
+      })
+    } 
   }

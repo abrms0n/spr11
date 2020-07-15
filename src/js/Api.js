@@ -1,18 +1,32 @@
-class Api {
+export class Api {
     constructor(options) {
         this.options = options;
     }
-
+   
     getInitialCards() {
        return fetch(`${this.options.baseUrl}/cards`, {
            headers: this.options.headers                 
        })
+       .then(res => {
+        if (!res.ok) {
+            return Promise.reject(`Ошибочка вышла: ${res.status}`);
+        } else {
+            return res.json()
+        }
+      }) 
     }
 
     getUserInfo() {
         return fetch(`${this.options.baseUrl}/users/me`, {         
             headers: this.options.headers
         })
+        .then(res => {
+            if (!res.ok) {
+                return Promise.reject(`Ошибочка вышла: ${res.status}`);
+            } else {
+                return res.json()
+            }
+          })   
     }
 
     updateUserInfo(newName, newJob) {                                          
@@ -24,5 +38,12 @@ class Api {
                 about: newJob
             })
         })
+        .then(res => {
+            if (!res.ok) {
+                return Promise.reject(`Ошибочка вышла: ${res.status}`);
+            } else {
+                return res.json()
+            }
+          }) 
     }
 }

@@ -48,8 +48,13 @@ _version 1.0.1, reviewed_
 ### Сборка
 
 &bull; production:
+
     npm run build для запуска production сборки
+
 &bull; development
+
     npm run dev для запуска development сборки
+
 &bull; deploy
+
     npm run delpoy для размещения проекта на github-pages

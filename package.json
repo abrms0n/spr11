@@ -1,7 +1,7 @@
 {
   "name": "spr11",
   "homepage": "https://abramsea.github.io/spr11",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "homework for ya.praktikum",
   "main": "index.js",
   "scripts": {

@@ -3,7 +3,7 @@
 
 ---
 
-Приветствую! в данном репозитории находится проектная работа, сделанная по домашним заданиям курса Яндекс.Практикум - фронтент-разбаботчик.
+Приветствую! в данном репозитории находится проектная работа, сделанная по домашним заданиям курса Яндекс.Практикум - фронтенд-разбаботчик.
 
 Работа написана с применением js-классов, инкапсуляции, модульного подхода и др.
 
@@ -13,7 +13,8 @@ _version 1.0.1, reviewed_
 
 ### Клонирование
 
-&bull; git clone https://github.com/abramsea/spr11.git
+
+    git clone https://github.com/abramsea/spr11.git
 
 ### Зависимости
 
@@ -46,9 +47,9 @@ _version 1.0.1, reviewed_
 
 ### Сборка
 
-1) production:
-&bull; npm run build для запуска production сборки
-2) development
-&bull; npm run dev для запуска development сборки
-3) deploy
-&bull; npm run delpoy для размещения проекта на github-pages
+&bull; production:
+    npm run build для запуска production сборки
+&bull; development
+    npm run dev для запуска development сборки
+&bull; deploy
+    npm run delpoy для размещения проекта на github-pages
